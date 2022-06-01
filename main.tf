@@ -22,3 +22,16 @@ resource "docker_image" "alura-books" {
 resource "docker_image" "mongo" {
   name = "mongo"
 }
+
+resource "docker_network" "private_network" {
+  name = "my_network"
+}
+
+resource "docker_container" "mongo" {
+  name  = "mongodb"
+  image = docker_image.mongo.latest
+  networks_advanced {
+    name = "${docker_network.private_network.name}"
+  }
+}
+
