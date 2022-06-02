@@ -61,3 +61,17 @@ resource "docker_container" "node3" {
     name = "${docker_network.private_network.name}"
   }
 }
+
+resource "docker_container" "nginx" {
+  name = "nginx"
+  image = docker_image.nginx-curso-alura-docker.latest
+
+  ports {
+    internal = 80
+    external = 80
+  }
+  networks_advanced {
+    name = "${docker_network.private_network.name}"
+  }
+}
+
