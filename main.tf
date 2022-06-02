@@ -35,3 +35,29 @@ resource "docker_container" "mongo" {
   }
 }
 
+resource "docker_container" "node1" {
+  name = "node1"
+  image = docker_image.alura-books.latest
+
+  networks_advanced {
+    name = "${docker_network.private_network.name}"
+  }
+}
+
+resource "docker_container" "node2" {
+  name = "node2"
+  image = docker_image.alura-books.latest
+
+  networks_advanced {
+    name = "${docker_network.private_network.name}"
+  }
+}
+
+resource "docker_container" "node3" {
+  name = "node3"
+  image = docker_image.alura-books.latest
+
+  networks_advanced {
+    name = "${docker_network.private_network.name}"
+  }
+}
