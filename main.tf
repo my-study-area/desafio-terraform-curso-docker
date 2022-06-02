@@ -12,11 +12,11 @@ provider "docker" {
 }
 
 resource "docker_image" "nginx-curso-alura-docker" {
-  name = "adrianoavelino/nginx-curso-alura-docker:latest"
+  name = "adrianoavelino/nginx-curso-alura-docker:0.1"
 }
 
 resource "docker_image" "alura-books" {
-  name = "adrianoavelino/alura-books:latest"
+  name = "adrianoavelino/alura-books:0.2"
 }
 
 resource "docker_image" "mongo" {
