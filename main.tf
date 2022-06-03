@@ -12,19 +12,19 @@ provider "docker" {
 }
 
 resource "docker_image" "nginx-curso-alura-docker" {
-  name = "adrianoavelino/nginx-curso-alura-docker:0.1"
+  name = var.image.nginx
 }
 
 resource "docker_image" "alura-books" {
-  name = "adrianoavelino/alura-books:0.2"
+  name = var.image.app
 }
 
 resource "docker_image" "mongo" {
-  name = "mongo"
+  name = var.image.mongo
 }
 
 resource "docker_network" "private_network" {
-  name = "my_network"
+  name = var.network_name
 }
 
 resource "docker_container" "mongo" {
@@ -67,8 +67,8 @@ resource "docker_container" "nginx" {
   image = docker_image.nginx-curso-alura-docker.latest
 
   ports {
-    internal = 80
-    external = 80
+    internal = var.port.internal
+    external = var.port.external
   }
   networks_advanced {
     name = "${docker_network.private_network.name}"
