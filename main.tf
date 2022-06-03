@@ -1,13 +1,7 @@
-resource "docker_image" "nginx-curso-alura-docker" {
-  name = var.image.nginx
-}
-
-resource "docker_image" "alura-books" {
-  name = var.image.app
-}
-
-resource "docker_image" "mongo" {
-  name = var.image.mongo
+module "image" {
+  for_each = local.image_type
+  source = "./image"
+  image_stored = each.value.image
 }
 
 resource "docker_network" "private_network" {
@@ -16,7 +10,7 @@ resource "docker_network" "private_network" {
 
 resource "docker_container" "mongo" {
   name  = "mongodb"
-  image = docker_image.mongo.latest
+  image = module.image.mongo.image_type
   networks_advanced {
     name = "${docker_network.private_network.name}"
   }
@@ -24,7 +18,7 @@ resource "docker_container" "mongo" {
 
 resource "docker_container" "node1" {
   name = "node1"
-  image = docker_image.alura-books.latest
+  image = module.image.app.image_type
 
   networks_advanced {
     name = "${docker_network.private_network.name}"
@@ -33,7 +27,7 @@ resource "docker_container" "node1" {
 
 resource "docker_container" "node2" {
   name = "node2"
-  image = docker_image.alura-books.latest
+  image = module.image.app.image_type
 
   networks_advanced {
     name = "${docker_network.private_network.name}"
@@ -42,7 +36,7 @@ resource "docker_container" "node2" {
 
 resource "docker_container" "node3" {
   name = "node3"
-  image = docker_image.alura-books.latest
+  image = module.image.app.image_type
 
   networks_advanced {
     name = "${docker_network.private_network.name}"
@@ -51,7 +45,7 @@ resource "docker_container" "node3" {
 
 resource "docker_container" "nginx" {
   name = "nginx"
-  image = docker_image.nginx-curso-alura-docker.latest
+  image = module.image.nginx.image_type
 
   ports {
     internal = var.port.internal
