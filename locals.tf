@@ -12,4 +12,6 @@ locals {
       image = var.image.nginx
     }
   }
+
+  container_count = length(var.stack_container.app.names)
 }

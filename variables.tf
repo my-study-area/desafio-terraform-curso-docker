@@ -17,3 +17,13 @@ variable "port" {
     external = 80
   }
 }
+
+variable "stack_container" {
+  type = map(any)
+
+  default = {
+    app = {
+      names = ["node1", "node2", "node3"]
+    }
+  }
+}
