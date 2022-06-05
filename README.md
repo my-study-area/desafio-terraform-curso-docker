@@ -1,6 +1,45 @@
 # desafio-terraform-curso-docker
 Repositório criado com o objetivo de assimilar os conhecimento adquiridos com terraform e docker
 
+![Print exibindo o output da execução do comando terraform apply --auto-approve no terminal para criação dos containers docker da aplicação](./print.png)
+
+Projeto desenvolvido com o intuito de assimilar os conhecimentos adquiridos nos estudos de Terrafom da [Zup Edu](https://github.com/adrianoavelino/zupedu-curso-terraform) e [Alura](https://github.com/my-study-area/curso-alura-terraform). Uma forma interessante para consolidar os conhecimentos é aplicar em um novo projeto ou em um projeto já existente, mas neste caso foi aplicado os conhecimentos de Terraform para inciar uma aplicação desenvolvida no [Curso de Docker: Criando containers sem dor de cabeça ](https://github.com/my-study-area/curso-alura-docker) da Alura, mas utilizando Terraform.
+
+# Tecnologias
+- Terraform
+- Docker
+- tfenv para versionamento
+
+# Iniciando o projeto
+```bash
+# clona o projeto
+git clone https://github.com/my-study-area/desafio-terraform-curso-docker
+
+# entra no diretório
+cd desafio-terraform-curso-docker
+
+# verifica versão do terraform
+terraform -v #Terraform v1.1.9
+
+# prepara o diretório de trabalho instalando os providers 
+# necessários e etc
+terraform init
+
+# mostra as modificações que serão aplicadas
+terraform plan
+
+# cria ou atualiza a infraestrutura
+terraform apply -auto-approve
+
+# lista os containers em execução
+docker ps
+
+# alimenta o banco de dados com os dados inciais
+# Obs: também é possível acessar http://localhost/seed no navegador
+curl http://localhost/seed -v
+```
+Para visualizar a aplicação em execução acesse [http://localhost/](http://localhost/).
+
 # Passos para iniciar a aplicação com docker
 ```bash
 # cria a rede my_network
