@@ -18,6 +18,15 @@ docker run -d --name node2 --network my_network adrianoavelino/alura-books:0.2
 # executa o container com node3
 docker run -d --name node3 --network my_network adrianoavelino/alura-books:0.2
 
-# # executa o nginx como controle de carga
+# executa o nginx como controle de carga
 docker run -d --name nginx -p 80:80 --network my_network adrianoavelino/nginx-curso-alura-docker:0.1
+
+# verifica os logs do container node1
+docker logs -f node1
+
+# verifica os logs do container node2
+docker logs -f node2
+
+# verifica os logs do container node3
+docker logs -f node3
 ```
