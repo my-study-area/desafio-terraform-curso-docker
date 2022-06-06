@@ -1,4 +1,9 @@
 # desafio-terraform-curso-docker
+![GitHub top language](https://img.shields.io/github/languages/top/my-study-area/desafio-terraform-curso-docker)
+[![Feito por](https://img.shields.io/badge/made%20by-adriano%20avelino-gree)](https://github.com/adrianoavelino)
+[![Tamanho do repositório](https://img.shields.io/github/repo-size/my-study-area/desafio-terraform-curso-docker)](https://img.shields.io/github/repo-size/my-study-area/desafio-terraform-curso-docker)
+[![Último commit do Github](https://img.shields.io/github/last-commit/my-study-area/desafio-terraform-curso-docker)](https://github.com/my-study-area/desafio-terraform-curso-docker/commits/main)
+
 Repositório criado com o objetivo de assimilar os conhecimento adquiridos com terraform e docker
 
 ![Print exibindo o output da execução do comando terraform apply --auto-approve no terminal para criação dos containers docker da aplicação](./print.png)
