@@ -10,6 +10,16 @@ Repositório criado com o objetivo de assimilar os conhecimento adquiridos com t
 
 Projeto desenvolvido com o intuito de assimilar os conhecimentos adquiridos nos estudos de Terrafom da [Zup Edu](https://github.com/adrianoavelino/zupedu-curso-terraform) e [Alura](https://github.com/my-study-area/curso-alura-terraform). Uma forma interessante para consolidar os conhecimentos é aplicar em um novo projeto ou em um projeto já existente, mas neste caso foi aplicado os conhecimentos de Terraform para inciar uma aplicação desenvolvida no [Curso de Docker: Criando containers sem dor de cabeça ](https://github.com/my-study-area/curso-alura-docker) da Alura, mas utilizando Terraform.
 
+## Processo de desenvolvimento:
+- relembrar os passos necessários para execução da aplicação com docker-compose e atualização do readme no Projeto do Curso de Docker
+- adicionar os comandos utilizados para executar a aplicação utilizando somente o docker para executar os containers, criar networks e configurá-los 
+- [Envio das imagens para do Docker Hub](https://hub.docker.com/u/adrianoavelino)
+  - [Atualização das dependências da aplicação em Node](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
+  - [Atualização da sintaxe das views da aplicação que utilizam marko](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
+  - [Atualização das dependência da aplicação](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
+- Converção do projeto de docker-compose para Terraform
+  - pesquisa sobre a criação de networks e configuração nos containers no Terraform
+
 # Tecnologias
 - Terraform
 - Docker
