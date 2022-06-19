@@ -17,7 +17,7 @@ Projeto desenvolvido com o intuito de assimilar os conhecimentos adquiridos nos 
   - [Atualização das dependências da aplicação em Node](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
   - [Atualização da sintaxe das views da aplicação que utilizam marko](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
   - [Atualização das dependência da aplicação](https://github.com/my-study-area/curso-alura-docker#atualiza%C3%A7%C3%B5es)
-- Converção do projeto de docker-compose para Terraform
+- Conversão do projeto de docker-compose para Terraform
   - pesquisa sobre a criação de networks e configuração nos containers no Terraform
 
 # Tecnologias
