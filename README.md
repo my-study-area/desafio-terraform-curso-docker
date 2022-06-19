@@ -54,6 +54,7 @@ docker ps
 curl http://localhost/seed -v
 ```
 Para visualizar a aplicação em execução acesse [http://localhost/](http://localhost/).
+> A execução dos comandos está disponível no Youtube, [no canal Diário de um dev](https://youtu.be/fYhgI4kO8-0)
 
 # Passos para iniciar a aplicação com docker
 ```bash
